@@ -24,4 +24,4 @@ function* workerSaga(action) {
   }
 }
 
-export default { watcherSaga };
+export { watcherSaga };

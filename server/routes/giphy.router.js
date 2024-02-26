@@ -11,7 +11,7 @@ console.log('API_KEY:', API_KEY);
 const BASE_URL_GIPHY = 'api.giphy.com/v1/gifs/search';
 
 // Creating our POST ROUTE
-router.post('/search', (req, res) => {
+router.post('/', (req, res) => {
   const { searchTerm } = req.body;
   // What to do???
   axios

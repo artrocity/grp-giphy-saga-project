@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 import { requestGiphySearch } from '../Actions/Actions';
 import './SearchView.css';
@@ -7,10 +8,12 @@ import './SearchView.css';
 function SearchView() {
   const [searchTerm, setSearchTerm] = useState('');
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault;
     dispatch(requestGiphySearch(searchTerm));
+    history.push('/results');
   };
 
   return (
