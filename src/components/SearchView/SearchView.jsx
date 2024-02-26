@@ -11,7 +11,7 @@ function SearchView() {
   const history = useHistory();
 
   const handleSubmit = (event) => {
-    event.preventDefault;
+    event.preventDefault();
     dispatch(requestGiphySearch(searchTerm));
     history.push('/results');
   };
