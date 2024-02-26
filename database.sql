@@ -16,6 +16,7 @@ INSERT INTO "categories"
   ('felicitous'),
   ('whimsical');
 
+
 -- Favorites table:
 
 -- You'll need a "favorites" table for storing each instance of
