@@ -1,18 +1,23 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+import './SearchResults.css';
+
 function SearchResults() {
   const giphyResults = useSelector((state) => state.searchReducer.giphyResults);
   return (
     <>
-      <h1>Here are your results</h1>
+      <h1 className="result-header">Here are your results</h1>
       {/* Map Out the Results */}
-      {giphyResults.map((result, index) => (
-        <div key={index}>
-          <img src={result.url} alt={result.title} />
-          <p>{result.title}</p>
-        </div>
-      ))}
+      <div className="results-container">
+        {giphyResults.map((result, index) => (
+          <div key={index} className="result-item">
+            <img src={result.url} alt={result.title} />
+            <p>{result.title}</p>
+            <button>Save as Favorite</button>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
